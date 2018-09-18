@@ -11,11 +11,8 @@ class QuizQuestionButton extends Component {
     );
   }
 
-  handleClick(buttonText) {
-    this.props.clickHandler();
-    if (buttonText === this.props.quiz_question.answer) {
-      this.props.showNextQuestionHandler();
-    }
+  handleClick() {
+    this.props.clickHandler(this.props.button_text);
   }
 }
 export default QuizQuestionButton;
